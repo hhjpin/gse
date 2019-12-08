@@ -34,7 +34,7 @@ import (
 	"runtime/pprof"
 	"time"
 
-	"github.com/go-ego/gse"
+	"github.com/hhjpin/gse"
 )
 
 var (

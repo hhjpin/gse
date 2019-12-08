@@ -1,5 +1,7 @@
 package gse
 
+import "math"
+
 // Text 字串类型，可以用来表达
 //	1. 一个字元，比如 "世" 又如 "界", 英文的一个字元是一个词
 //	2. 一个分词，比如 "世界" 又如 "人口"
@@ -24,6 +26,19 @@ type Token struct {
 
 	// 该分词文本的进一步分词划分，见 Segments 函数注释。
 	segments []*Segment
+}
+
+func NewToken(text []Text, frequency int, totalFrequency int64, pos string, seg ...*Segment) *Token {
+	tmp1 := float32(math.Log2(float64(totalFrequency)))
+	tmp2 := float32(math.Log2(float64(frequency)))
+	distance := tmp1 - tmp2
+	return &Token{
+		text:      text,
+		frequency: frequency,
+		distance:  distance,
+		pos:       pos,
+		segments:  seg,
+	}
 }
 
 // Text 返回分词文本

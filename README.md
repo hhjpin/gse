@@ -7,23 +7,23 @@ Go efficient text segmentation; support english, chinese, japanese and other.
 [![CircleCI Status](https://circleci.com/gh/go-ego/gse.svg?style=shield)](https://circleci.com/gh/go-ego/gse)
 [![codecov](https://codecov.io/gh/go-ego/gse/branch/master/graph/badge.svg)](https://codecov.io/gh/go-ego/gse)
 [![Build Status](https://travis-ci.org/go-ego/gse.svg)](https://travis-ci.org/go-ego/gse)
-[![Go Report Card](https://goreportcard.com/badge/github.com/go-ego/gse)](https://goreportcard.com/report/github.com/go-ego/gse)
-[![GoDoc](https://godoc.org/github.com/go-ego/gse?status.svg)](https://godoc.org/github.com/go-ego/gse)
-[![GitHub release](https://img.shields.io/github/release/go-ego/gse.svg)](https://github.com/go-ego/gse/releases/latest)
+[![Go Report Card](https://goreportcard.com/badge/github.com/hhjpin/gse)](https://goreportcard.com/report/github.com/hhjpin/gse)
+[![GoDoc](https://godoc.org/github.com/hhjpin/gse?status.svg)](https://godoc.org/github.com/hhjpin/gse)
+[![GitHub release](https://img.shields.io/github/release/go-ego/gse.svg)](https://github.com/hhjpin/gse/releases/latest)
 [![Join the chat at https://gitter.im/go-ego/ego](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/go-ego/ego?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-<!-- [![Release](https://github-release-version.herokuapp.com/github/go-ego/gse/release.svg?style=flat)](https://github.com/go-ego/gse/releases/latest) -->
+<!-- [![Release](https://github-release-version.herokuapp.com/github/go-ego/gse/release.svg?style=flat)](https://github.com/hhjpin/gse/releases/latest) -->
 <!--<a href="https://github.com/go-ego/ego/releases"><img src="https://img.shields.io/badge/%20version%20-%206.0.0%20-blue.svg?style=flat-square" alt="Releases"></a>-->
 
-[简体中文](https://github.com/go-ego/gse/blob/master/README_zh.md)
+[简体中文](https://github.com/hhjpin/gse/blob/master/README_zh.md)
 
-<a href="https://github.com/go-ego/gse/blob/master/dictionary.go">Dictionary </a> with double array trie (Double-Array Trie) to achieve,
-<a href="https://github.com/go-ego/gse/blob/master/segmenter.go">Sender </a> algorithm is the shortest path based on word frequency plus dynamic programming, and DAG and HMM algorithm word segmentation.
+<a href="https://github.com/hhjpin/gse/blob/master/dictionary.go">Dictionary </a> with double array trie (Double-Array Trie) to achieve,
+<a href="https://github.com/hhjpin/gse/blob/master/segmenter.go">Sender </a> algorithm is the shortest path based on word frequency plus dynamic programming, and DAG and HMM algorithm word segmentation.
 
-Support common, search engine, full mode, precise mode and HMM mode multiple word segmentation modes, support user dictionary, POS tagging, run<a href="https://github.com/go-ego/gse/blob/master/server/server.go"> JSON RPC service</a>.
+Support common, search engine, full mode, precise mode and HMM mode multiple word segmentation modes, support user dictionary, POS tagging, run<a href="https://github.com/hhjpin/gse/blob/master/server/server.go"> JSON RPC service</a>.
 
 Support HMM cut text use Viterbi algorithm.
 
-Text Segmentation speed<a href="https://github.com/go-ego/gse/blob/master/benchmark/benchmark.go"> single thread</a> 9.2MB/s，<a href="https://github.com/go-ego/gse/blob/master/benchmark/goroutines/goroutines.go">goroutines concurrent</a> 26.8MB/s. HMM text segmentation single thread 3.2MB/s. (2core 4threads Macbook Pro).
+Text Segmentation speed<a href="https://github.com/hhjpin/gse/blob/master/benchmark/benchmark.go"> single thread</a> 9.2MB/s，<a href="https://github.com/hhjpin/gse/blob/master/benchmark/goroutines/goroutines.go">goroutines concurrent</a> 26.8MB/s. HMM text segmentation single thread 3.2MB/s. (2core 4threads Macbook Pro).
 
 ## Binding:
 
@@ -32,7 +32,7 @@ Text Segmentation speed<a href="https://github.com/go-ego/gse/blob/master/benchm
 ## Install / update
 
 ```
-go get -u github.com/go-ego/gse
+go get -u github.com/hhjpin/gse
 ```
 
 ## [Build-tools](https://github.com/go-ego/re)
@@ -62,7 +62,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/go-ego/gse"
+	"github.com/hhjpin/gse"
 )
 
 var (
@@ -101,7 +101,7 @@ func main() {
 	// Loading the default dictionary
 	seg.LoadDict()
 	// Load the dictionary
-	// seg.LoadDict("your gopath"+"/src/github.com/go-ego/gse/data/dict/dictionary.txt")
+	// seg.LoadDict("your gopath"+"/src/github.com/hhjpin/gse/data/dict/dictionary.txt")
 
 	cut()
 
@@ -118,7 +118,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/go-ego/gse"
+	"github.com/hhjpin/gse"
 )
 
 func main() {
@@ -133,14 +133,14 @@ func main() {
 }
 ```
 
-[Look at an Chinese example](https://github.com/go-ego/gse/blob/master/examples/example.go)
+[Look at an Chinese example](https://github.com/hhjpin/gse/blob/master/examples/example.go)
 
-[Look at an Japanese example](https://github.com/go-ego/gse/blob/master/examples/jp/main.go)
+[Look at an Japanese example](https://github.com/hhjpin/gse/blob/master/examples/jp/main.go)
 
 ## Authors
 * [The author is vz](https://github.com/vcaesar)
 * [Maintainers](https://github.com/orgs/go-ego/people)
-* [Contributors](https://github.com/go-ego/gse/graphs/contributors)
+* [Contributors](https://github.com/hhjpin/gse/graphs/contributors)
 
 ## License
 

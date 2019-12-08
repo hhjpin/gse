@@ -32,7 +32,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/go-ego/gse"
+	"github.com/hhjpin/gse"
 )
 
 var (
